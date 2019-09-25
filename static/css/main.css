@@ -10,13 +10,8 @@ body {
   background: url("/static/img/qm-bg.jpg");
 }
 
-nav {
-  border-left: 1px solid #aaaaaa;
-  border-right: 1px solid #aaaaaa;
-}
-
-.navbar-brand img {
-  height: 40px;
+hr {
+  width: 80%;
 }
 
 .content {
@@ -26,6 +21,35 @@ nav {
   background-color: rgba(255, 255, 255, 0.95);
   border-left: 1px solid #aaaaaa;
   border-right: 1px solid #aaaaaa;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+.form-control:focus {
+  border-color: #c45f5f;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #fafafa;
+}
+
+#high-score-table {
+  border: 1px solid black;
+  padding: 2rem;
+}
+
+input {
+  text-align: center;
+}
+
+nav {
+  border-left: 1px solid #aaaaaa;
+  border-right: 1px solid #aaaaaa;
+}
+
+.navbar-brand img {
+  height: 40px;
 }
 
 footer {
@@ -65,16 +89,4 @@ footer i:hover {
 .modal img {
   height: 80px;
 }
-
-.form-control::-webkit-input-placeholder {
-  color: #bbb;
-}
-
-hr {
-  width: 80%;
-}
-
-#high-score-table {
-  border: 1px solid black;
-}
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */

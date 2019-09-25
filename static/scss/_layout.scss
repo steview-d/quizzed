@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background: url("/static/img/qm-bg.jpg");
+}
+
+hr {
+    width: 80%;
+}
+
+.content {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.95);
+    @include container-borders;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #bbb;
+}
+
+.form-control:focus {
+    border-color: rgb(196, 95, 95);
+    box-shadow: none;
+    background-color: #fafafa;
+    
+}
+
+#high-score-table {
+    border: 1px solid black;
+    padding: 2rem;
+}
+
+input { 
+    text-align: center; 
+}
