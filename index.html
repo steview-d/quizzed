@@ -29,30 +29,55 @@
             <ul class="navbar-nav ml-auto my-2 my-lg-0 qqqq">
                 <li><button id="btn-change-name" class="btn btn-outline-danger my-2 mx-0 mx-lg-2">Change Name</button>
                 </li>
-                <li><button id="btn-instructions" class="btn btn-outline-danger my-2 mx-0 mx-lg-2">Instructions</button>
+                <li><button id="btn-instructions" class="btn btn-outline-danger my-2 mx-0 mx-lg-2" data-toggle="modal"
+                        data-target="#instructionsModal">Instructions</button>
                 </li>
             </ul>
         </div>
     </nav>
 
     <!-- main content -->
-    <div class="content"></div>
+    <div class="content container"></div>
 
     <!-- footer -->
     <footer class="container bg-secondary text-white p-3 h-100">
         <div class="row text-center align-items-center h-100">
             <div class="col-12 col-md">
                 <!-- <p class="small">Questions & Answers<br/>supplied by</p> -->
-                <img src="static\img\otdb_sm.png" class="otdb">
+                <a href="https://opentdb.com/" target="_blank"><img src="static\img\otdb_sm.png"></a>
             </div>
             <div class="col-12 col-md-5">
-                <img src="static\img\logo_w.png" class="logo">
+                <a href="#"><img src="static\img\logo_w.png"></a>
             </div>
             <div class="col-12 col-md">
-                <i class="fa fa-github fa-3x" aria-hidden="true"></i>
+                <a href="https://github.com/steview-d" target="_blank"><i class="fa fa-github fa-3x"
+                        aria-hidden="true"></i></a>
             </div>
         </div>
     </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="instructionsModal" tabindex="-1" role="dialog" aria-labelledby="instructions"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center mx-auto">
+                    <h5 class="modal-title" id="exampleModalLabel">How To Play <br /><img src="static\img\logo.png">
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    Instructions to be added here
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
 
     <!-- bs4 js scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
