@@ -10,6 +10,11 @@ body {
   background: url("/static/img/qm-bg.jpg");
 }
 
+nav {
+  border-left: 1px solid #aaaaaa;
+  border-right: 1px solid #aaaaaa;
+}
+
 .navbar-brand img {
   height: 40px;
 }
@@ -19,12 +24,19 @@ body {
       -ms-flex: 1;
           flex: 1;
   background-color: rgba(255, 255, 255, 0.95);
+  border-left: 1px solid #aaaaaa;
+  border-right: 1px solid #aaaaaa;
+}
+
+footer {
+  border-left: 1px solid #aaaaaa;
+  border-right: 1px solid #aaaaaa;
 }
 
 footer img {
   height: 60px;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 footer img:hover {
@@ -34,8 +46,8 @@ footer img:hover {
 
 footer i {
   color: #e0e0e0;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 @media only screen and (max-width: 767px) {
@@ -52,5 +64,17 @@ footer i:hover {
 
 .modal img {
   height: 80px;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+hr {
+  width: 80%;
+}
+
+#high-score-table {
+  border: 1px solid black;
 }
 /*# sourceMappingURL=style.css.map */
