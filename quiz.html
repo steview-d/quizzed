@@ -27,7 +27,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto my-2 my-lg-0 qqqq">
-                <li><button onclick="removeName()" id="btn-change-name" class="btn btn-outline-danger my-2 mx-0 mx-lg-2">Change Name</button>
+                <li><button id="btn-change-name" class="btn btn-outline-danger my-2 mx-0 mx-lg-2">Change Name</button>
                 </li>
                 <li><button id="btn-instructions" class="btn btn-outline-danger my-2 mx-0 mx-lg-2" data-toggle="modal"
                         data-target="#instructionsModal">Instructions</button>
@@ -38,63 +38,9 @@
 
     <!-- main content -->
     <div class="content container">
-        <!-- player name -->
-        <div id="player-name-container" class="my-5 text-center hidden">
-            <h2>Who Are You?</h2>
-            <div class="input-group input-group-lg mx-auto my-3 col-10 col-md-8 col-xl-6">
-                <input type="text" class="form-control my-3" placeholder="" aria-label="player name" name="playerName"
-                    id="playerName" autofocus>
-            </div>
-        </div>
-        <div class="text-center">
-            <a href="quiz.html" class="btn btn-outline-primary">Start Quiz></a>
-        </div>
-
-        <hr>
-
-        <!-- high scores -->
-        <div id="high-scores" class="my-5 text-center">
-            <h2 class="text-center">High Scores</h2>
-            <div id="high-score-table" class="my-3 mx-auto col-10 col-md-8 col-xl-6">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Score</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td id="hs-n1">Mark</td>
-                            <td id="hs-s1">Otto</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td id="hs-n2">Jacob</td>
-                            <td id="hs-s2">Thornton</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td id="hs-n3">Larry</td>
-                            <td id="hs-s3">the Bird</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td id="hs-n4">Larry</td>
-                            <td id="hs-s4">the Bird</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td id="hs-n5">Larry</td>
-                            <td id="hs-s5">the Bird</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
+        <br>
+        <h1>GAME START!</h1>
+        <h4 id="player-name"></h4>
     </div>
 
     <!-- footer -->
