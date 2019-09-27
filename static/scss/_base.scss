@@ -1,11 +1,25 @@
-// variables
+// ------------------------------------------------------------------ variables
+
 $container-border: #aaaaaa;
 
-// fonts
+
+// ---------------------------------------------------------------------- fonts
 
 
-// mixins
+// --------------------------------------------------------------------- mixins
+
 @mixin container-borders {
     border-left: 1px solid $container-border;
     border-right: 1px solid $container-border;
+}
+
+@mixin black-border {
+    border: 1px solid black;
+}
+
+
+// -------------------------------------------------------------------- utility
+
+.hidden {
+    display: none;
 }

@@ -40,16 +40,47 @@
 
     <!-- main content -->
     <div class="content container">
-        <br>
-        <h1>GAME START!</h1>
-        <h4 id="player-name"></h4>
+        <div class="mx-2 mx-md-4 mx-xl-5">
+            <br />
+            <!-- info boxes -->
+            <div id="stat-boxes" class="text-center my-3">
+                <div class="row justify-content-between">
+                    <div id="playerNameBox" class="col-md-3 m-3 stats-display">
+                        <h5>Player</h5>
+                        <h3> </h3>
+                    </div>
+                    <div id="multiplierBox" class="col col-md-3 m-3 stats-display">
+                        <h5>Multiplier</h5>
+                        <h3>1</h3>
+                    </div>
+                    <div id="scoreBox" class="col col-md-3 m-3 stats-display">
+                        <h5>Score</h5>
+                        <h3>0</h3>
+                    </div>
+                </div>
+            </div>
+            <br />
+
+            <!-- Q & A area -->
+            <div id="qa-box" class="mb-5 p-4">
+                <div class="row">
+                    <div id="q-num" class="col-2">Q1</div>
+                    <div id="q-text" class="col pb-4">This is the question text</div>
+                </div>
+                <div class="answer-grid-outer">
+                    <div id="answer-1" class="answer-grid-inner">A</div>
+                    <div id="answer-2" class="answer-grid-inner">B</div>
+                    <div id="answer-3" class="answer-grid-inner">C</div>
+                    <div id="answer-4" class="answer-grid-inner">D</div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- footer -->
     <footer class="container bg-secondary text-white p-3 h-100">
         <div class="row text-center align-items-center h-100">
             <div class="col-12 col-md">
-                <!-- <p class="small">Questions & Answers<br/>supplied by</p> -->
                 <a href="https://opentdb.com/" target="_blank"><img src="static\img\otdb_sm.png"></a>
             </div>
             <div class="col-12 col-md-5">

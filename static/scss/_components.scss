@@ -1,4 +1,22 @@
-// navbar
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background: url("/static/img/qm-bg.jpg");
+}
+
+hr {
+    width: 80%;
+}
+
+.content {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.95);
+    @include container-borders;
+}
+
+
+// --------------------------------------------------------------------- navbar
 
 nav {
     @include container-borders;
@@ -11,7 +29,7 @@ nav {
 }
 
 
-// footer
+// --------------------------------------------------------------------- footer
 
 footer {
 
@@ -40,7 +58,7 @@ footer {
 }
 
 
-// modal
+// ---------------------------------------------------------------------- modal
 
 .modal {
     img {

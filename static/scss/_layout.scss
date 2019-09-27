@@ -1,22 +1,6 @@
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    background: url("/static/img/qm-bg.jpg");
-}
-
-.hidden  {
-    display: none;
-}
-
-hr {
-    width: 80%;
-}
-
-.content {
-    flex: 1;
-    background-color: rgba(255, 255, 255, 0.95);
-    @include container-borders;
+// ------------------------------------------------------- input & form control
+input {
+    text-align: center;
 }
 
 .form-control::-webkit-input-placeholder {
@@ -27,14 +11,56 @@ hr {
     border-color: rgb(196, 95, 95);
     box-shadow: none;
     background-color: #fafafa;
-    
 }
 
+// ---------------------------------------------------------------- high scores
 #high-score-table {
-    border: 1px solid black;
+    @include black-border;
     padding: 2rem;
 }
 
-input { 
-    text-align: center; 
+// ---------------------------------------------------------------------- stats
+.stats-display {
+    padding: 1rem;
+    @include black-border;
+}
+
+
+// ---------------------------------------------------------------- answer grid
+
+.answer-grid-outer {
+    margin: 20px auto;
+    width: 250px;
+    height: 500px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 15% 15% 15%;
+    grid-row: auto / auto;
+    grid-column-gap: 5%;
+    grid-row-gap: 5%;
+
+    @media screen and (min-width: 576px) {
+        width: 400px;
+        height: 300px;
+        grid-template-columns: 47.5% 47.5%;
+        grid-template-rows: 45% 45%;
+        grid-row-gap: 10%;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 600px;
+        height: 300px;
+    }
+
+    .answer-grid-inner {
+        background-color: #333;
+        border-radius: 10px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        font-family: sans-serif;
+    }
 }

@@ -1,30 +1,9 @@
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: url("/static/img/qm-bg.jpg");
-}
-
 .hidden {
   display: none;
 }
 
-hr {
-  width: 80%;
-}
-
-.content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-left: 1px solid #aaaaaa;
-  border-right: 1px solid #aaaaaa;
+input {
+  text-align: center;
 }
 
 .form-control::-webkit-input-placeholder {
@@ -43,8 +22,86 @@ hr {
   padding: 2rem;
 }
 
-input {
-  text-align: center;
+.stats-display {
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.answer-grid-outer {
+  margin: 20px auto;
+  width: 250px;
+  height: 500px;
+  background-color: #fff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 15% 15% 15% 15%;
+      grid-template-rows: 15% 15% 15% 15%;
+  grid-row: auto / auto;
+  grid-column-gap: 5%;
+  grid-row-gap: 5%;
+}
+
+@media screen and (min-width: 576px) {
+  .answer-grid-outer {
+    width: 400px;
+    height: 300px;
+    -ms-grid-columns: 47.5% 47.5%;
+        grid-template-columns: 47.5% 47.5%;
+    -ms-grid-rows: 45% 45%;
+        grid-template-rows: 45% 45%;
+    grid-row-gap: 10%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .answer-grid-outer {
+    width: 600px;
+    height: 300px;
+  }
+}
+
+.answer-grid-outer .answer-grid-inner {
+  background-color: #333;
+  border-radius: 10px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 40px;
+  font-family: sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url("/static/img/qm-bg.jpg");
+}
+
+hr {
+  width: 80%;
+}
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-left: 1px solid #aaaaaa;
+  border-right: 1px solid #aaaaaa;
 }
 
 nav {
