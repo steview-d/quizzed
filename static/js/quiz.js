@@ -4,6 +4,7 @@ var playerName;
 
 const nameInput = document.querySelector("#playerName");
 const playerNameDiv = document.querySelector("#player-name-container");
+const startQuiz = document.querySelector('#quiz-start');
 
 // prepare high score information
 if (localStorage.getItem("highScores") === null) {
@@ -28,28 +29,20 @@ if (document.getElementById("high-score-table")) {
     });
 }
 
-// remove the player name from localStorage
-function removeName() {
-    localStorage.removeItem("playerName");
-    nameInput.value = "";
-    console.log("HELLO");
-    playerNameDiv.classList.remove("hidden");
-}
-
-nameInput.value = localStorage.getItem("playerName");
-
 // check if player name in local storage
 if (localStorage.getItem("playerName") === null) {
-    playerNameDiv.classList.remove("hidden");
+    nameInput.value = "";
 } else {
-    playerNameDiv.classList.add("hidden");
+    nameInput.value = localStorage.getItem("playerName");
 }
 
 // get player name from input form
 nameInput.addEventListener("keyup", () => {
     if (nameInput.value === "") {
         localStorage.removeItem("playerName");
+        startQuiz.classList.add("disabled");
     } else {
         localStorage.setItem("playerName", nameInput.value);
+        startQuiz.classList.remove("disabled");
     }
 });
