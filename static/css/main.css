@@ -63,6 +63,7 @@ input {
 }
 
 .answer-grid-outer .answer-grid-inner {
+  padding: 0.5rem;
   background-color: #333;
   border-radius: 10px;
   color: #fff;
@@ -75,7 +76,7 @@ input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 40px;
+  font-size: 1.5rem;
   font-family: sans-serif;
 }
 
