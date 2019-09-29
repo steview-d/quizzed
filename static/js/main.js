@@ -60,7 +60,6 @@ if (localStorage.getItem("difficulty") === null) {
 
 // set difficulty value in navbar dropdown
 difficultyOptions.forEach(option => {
-    console.log(option);
     if (option.value === difficulty) {
         option.setAttribute("selected", "");
     } else {

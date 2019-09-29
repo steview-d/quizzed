@@ -4,7 +4,9 @@ var playerName = localStorage.getItem("playerName");
 var difficulty;
 var score = 0;
 var answerReward = 100;
-var multiplier = 1.0;
+var multiplier = 1;
+var multiplierBase;
+var multiplierFactor;
 var qNum = 0;
 var correctAnswer;
 var correctAnswerPos;
@@ -132,7 +134,7 @@ var checkAnswer = function(e) {
     if (playerAnswer == correctAnswer) {
         e.path[0].classList.add("bg-success");
         score += Math.round(answerReward * multiplier);
-        multiplier *= 1.2;
+        multiplier *= multiplierFactor;
     } else {
         e.path[0].classList.add("bg-danger");
 
@@ -145,7 +147,7 @@ var checkAnswer = function(e) {
                 }, pause);
             }
         });
-        multiplier = 1;
+        multiplier = multiplierBase;
     }
 
     updateStats();
@@ -192,8 +194,24 @@ function checkForHighScore () {
     }
 }
 
-// logic start
+// set multiplier values based on selected difficulty
+switch (difficulty) {
+    case 'hard':
+        multiplierBase = 1.5;
+        multiplierFactor = 1.4;
+        break;
+    case 'medium':
+        multiplierBase = 1.2;
+        multiplierFactor = 1.3;
+        break;
+    default:
+        multiplierBase = 1;
+        multiplierFactor = 1.2;
+}
+multiplier = multiplierBase;
+
 updateStats();
+
 // uncomment below to pull from API
 // getData(url, function(data) {
 //     qData = data.results;
