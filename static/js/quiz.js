@@ -1,6 +1,7 @@
 // variables
 var highScores = JSON.parse(localStorage.getItem("highScores"));
 var playerName = localStorage.getItem("playerName");
+var difficulty;
 var score = 0;
 var answerReward = 100;
 var multiplier = 1.0;
@@ -11,9 +12,16 @@ var allAnswers = [];
 var playerAnswer;
 var qData;
 
-// Open Trivia DB API access variables
+// set difficulty level from value in localStorage
+// if no value, default to easy
+if (localStorage.getItem("difficulty") === null) {
+    difficulty = 'easy';
+} else {
+    difficulty = localStorage.getItem("difficulty");
+}
+
+// Pull Q&A data from API
 var qLimit = 3;
-var difficulty = "easy";
 const url = `https://opentdb.com/api.php?amount=${qLimit}&difficulty=${difficulty}&type=multiple`;
 
 // stats constants

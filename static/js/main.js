@@ -1,10 +1,13 @@
 // variables
 var highScores = [];
 var playerName;
+var difficulty;
 
 const nameInput = document.querySelector("#playerName");
 const playerNameDiv = document.querySelector("#player-name-container");
 const startQuiz = document.querySelector('#quiz-start');
+const difficultyDropdown = document.querySelector('#difficulty-selector');
+const difficultyOptions = document.querySelectorAll('.difficulty-option');
 
 // prepare high score information
 if (localStorage.getItem("highScores") === null) {
@@ -47,3 +50,27 @@ nameInput.addEventListener("keyup", () => {
         startQuiz.classList.remove("disabled");
     }
 });
+
+// get difficulty level value
+if (localStorage.getItem("difficulty") === null) {
+    difficulty = 'easy';
+} else {
+    difficulty = localStorage.getItem("difficulty");
+}
+
+// set difficulty value in navbar dropdown
+difficultyOptions.forEach(option => {
+    console.log(option);
+    if (option.value === difficulty) {
+        option.setAttribute("selected", "");
+    } else {
+        option.removeAttribute("selected");
+    }
+});
+
+// Update difficulty value if user changes it
+difficultyDropdown.addEventListener('change', (e) => {
+    localStorage.setItem("difficulty", e.path[0].value);
+});
+
+
