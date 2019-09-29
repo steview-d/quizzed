@@ -12,7 +12,7 @@ var playerAnswer;
 var qData;
 
 // Open Trivia DB API access variables
-var qLimit = 6;
+var qLimit = 3;
 var difficulty = "easy";
 const url = `https://opentdb.com/api.php?amount=${qLimit}&difficulty=${difficulty}&type=multiple`;
 
@@ -41,7 +41,8 @@ const answerList = [answer1, answer2, answer3, answer4];
 const answerBoxes = document.querySelectorAll(".answer-grid-inner");
 const nextQuestion = document.querySelector("#next-question");
 const nextQuestionButton = document.querySelector("#next-question-button");
-const pause = 2000;
+const pause = 1000;
+const highScoreMessage = document.querySelector("#high-score-message");
 
 // variables for testing
 const dataDisplay = document.querySelector("#data-display");
@@ -163,16 +164,24 @@ var checkAnswer = function(e) {
 // display end game summary and allow user to
 // play again or view high scores
 function endGame() {
-    console.log("THE END!!!!");
     endGameSummary.classList.remove("hidden");
     qaBox.classList.add("hidden");
     endGameScore.innerHTML = score;
-    // check score vs high score table data
+    checkForHighScore();
+}
 
-    // ALSO
-    // after each question attempt, show if right or wrong
-    // and have a 'next question' button
-    // either under answers, or floats at bottom of window
+function checkForHighScore () {
+    for(let i = 0; i < highScores.length; i++) {
+        if (score >= highScores[i].score) {
+            // console.log(i, highScores[i], score);
+            let newScore = {player: `${playerName}`, score: score};
+            highScores.splice(i, 0, newScore);
+            highScores.pop();
+            localStorage.setItem("highScores", JSON.stringify(highScores));
+            highScoreMessage.innerText = "Well done, you made it on to the high score table!";
+            break;
+        }
+    }
 }
 
 // logic start
