@@ -45,64 +45,64 @@
     </nav>
 
     <!-- main content -->
-    <div class="content container">
-        <!-- player name -->
-        <div id="player-name-container" class="my-5 text-center">
-            <h2>Who Are You?</h2>
-            <div class="input-group input-group-lg mx-auto my-3 col-10 col-md-8 col-xl-6">
-                <input type="text" class="form-control my-3" placeholder="Enter Name To Continue"
-                    aria-label="player name" name="playerName" id="playerName" autofocus>
+    <div class="content container high-score-bg px-0">
+        <div class="bg-white py-5">
+            <!-- player name -->
+            <div id="player-name-container" class="text-center">
+                <h2 class="py-5">Who Are You?</h2>
+                <div class="input-group input-group-lg mx-auto col-10 col-md-8 col-xl-6">
+                    <input type="text" class="form-control" placeholder="Enter Name To Continue"
+                        aria-label="player name" name="playerName" id="playerName" autofocus>
+                </div>
+                <div class="text-center py-5">
+                    <a href="quiz.html" id="quiz-start" class="btn btn-outline-danger disabled">Start Quiz</a>
+                </div>
             </div>
         </div>
-        <div class="text-center">
-            <a href="quiz.html" id="quiz-start" class="btn btn-outline-danger disabled">Start Quiz</a>
-        </div>
-
-        <hr class="my-5">
-
-        <!-- high scores -->
-        <div id="high-scores" class="my-5 text-center">
-            <h2 class="text-center">High Scores</h2>
-            <div id="high-score-table" class="my-3 mx-auto col-10 col-md-8 col-xl-6">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Score</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td id="hs-n1"> </td>
-                            <td id="hs-s1"> </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td id="hs-n2"> </td>
-                            <td id="hs-s2"> </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td id="hs-n3"> </td>
-                            <td id="hs-s3"> </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td id="hs-n4"> </td>
-                            <td id="hs-s4"> </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td id="hs-n5"> </td>
-                            <td id="hs-s5"> </td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div>
+            <!-- high scores -->
+            <div id="high-scores" class="my-5 text-center">
+                <h2 class="text-center my-5">High Scores</h2>
+                <div id="high-score-table" class="mx-auto col-10 col-md-8 col-xl-6">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td id="hs-n1"> </td>
+                                <td id="hs-s1"> </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td id="hs-n2"> </td>
+                                <td id="hs-s2"> </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td id="hs-n3"> </td>
+                                <td id="hs-s3"> </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td id="hs-n4"> </td>
+                                <td id="hs-s4"> </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td id="hs-n5"> </td>
+                                <td id="hs-s5"> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-
     </div>
 
     <!-- footer -->

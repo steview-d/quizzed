@@ -39,6 +39,7 @@ input {
 // ---------------------------------------------------------------- high scores
 #high-score-table {
     @include black-border;
+    background-color: white;
     padding: 2rem;
 }
 
@@ -100,4 +101,8 @@ input {
             font-size: 1.5rem;
         }
     }
+}
+
+.high-score-bg {
+    background-color: #ffa0aa;
 }
