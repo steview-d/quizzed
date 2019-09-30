@@ -58,6 +58,7 @@ nameInput.addEventListener("keyup", () => {
 // get difficulty level from localStorage
 if (localStorage.getItem("difficulty") === null) {
     difficulty = 'easy';
+    localStorage.setItem("difficulty", difficulty);
 } else {
     difficulty = localStorage.getItem("difficulty");
 }
