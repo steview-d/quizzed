@@ -1,5 +1,5 @@
 // variables
-var highScores = [];
+var highScores;
 var playerName;
 var difficulty;
 
@@ -9,6 +9,8 @@ const startQuiz = document.querySelector('#quiz-start');
 const difficultyDropdown = document.querySelector('#difficulty-selector');
 const difficultyOptions = document.querySelectorAll('.difficulty-option');
 
+
+// --------------------------------------------- high score table
 // prepare high score information
 if (localStorage.getItem("highScores") === null) {
     highScores = [
@@ -24,14 +26,14 @@ if (localStorage.getItem("highScores") === null) {
 }
 
 // populate high score table with high score data
-if (document.getElementById("high-score-table")) {
-    highScores.map((item, idx) => {
-        document.querySelector(`#hs-n${idx + 1}`).innerHTML =
-            item.player[0].toUpperCase() + item.player.slice(1);
-        document.querySelector(`#hs-s${idx + 1}`).innerHTML = item.score;
-    });
-}
+highScores.map((item, idx) => {
+    document.querySelector(`#hs-n${idx + 1}`).innerText =
+        item.player[0].toUpperCase() + item.player.slice(1);
+    document.querySelector(`#hs-s${idx + 1}`).innerText = item.score;
+});
 
+
+// --------------------------------------------- player name
 // check if player name in local storage
 if (localStorage.getItem("playerName") === null) {
     nameInput.value = "";
@@ -40,7 +42,7 @@ if (localStorage.getItem("playerName") === null) {
     startQuiz.classList.remove("disabled");
 }
 
-// get player name from input form
+// update localStorage with player name from input form
 nameInput.addEventListener("keyup", () => {
     if (nameInput.value === "") {
         localStorage.removeItem("playerName");
@@ -51,7 +53,9 @@ nameInput.addEventListener("keyup", () => {
     }
 });
 
-// get difficulty level value
+
+// --------------------------------------------- difficulty level
+// get difficulty level from localStorage
 if (localStorage.getItem("difficulty") === null) {
     difficulty = 'easy';
 } else {
