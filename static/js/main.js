@@ -1,4 +1,4 @@
-// variables
+// --------------------------------------------- variables
 var highScores;
 var playerName;
 var difficulty;
@@ -8,6 +8,24 @@ const playerNameDiv = document.querySelector("#player-name-container");
 const startQuiz = document.querySelector('#quiz-start');
 const difficultyDropdown = document.querySelector('#difficulty-selector');
 const difficultyOptions = document.querySelectorAll('.difficulty-option');
+
+
+// --------------------------------------------- localStorage
+function localStorageCheck(){
+    var ls = 'check';
+    try {
+        localStorage.setItem(ls, ls);
+        localStorage.removeItem(ls);
+        return true;
+    } catch(e) {
+        return false;
+    }
+}
+
+// alert user if localStorage is unavailable
+if(localStorageCheck() === false){
+    alert("Cannot access localStorage."+"\n"+"Please enable and refresh browser to continue with quiz.");
+}
 
 
 // --------------------------------------------- high score table
@@ -76,5 +94,3 @@ difficultyOptions.forEach(option => {
 difficultyDropdown.addEventListener('change', (e) => {
     localStorage.setItem("difficulty", e.path[0].value);
 });
-
-
