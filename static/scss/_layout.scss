@@ -1,7 +1,30 @@
+// ----------------------------------------------------------------- typography
+
+h1,
+h2,
+h3,
+h5,
+h6 {
+    // font-family: "Acme", sans-serif;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+#q-num {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 5rem;
+    @include lhCrop(1.65);
+}
+
+#q-text {
+    font-size: 1.2rem;
+}
+
 // ------------------------------------------------------- input & form control
 input {
     text-align: center;
 }
+
+// .input-group-lg>.form-control
 
 .form-control::-webkit-input-placeholder {
     color: #bbb;
@@ -25,6 +48,11 @@ input {
     @include black-border;
 }
 
+// #stat-boxes {
+//     h3 {
+//         font-size:
+//     }
+// }
 
 // ---------------------------------------------------------------- answer grid
 
@@ -61,7 +89,15 @@ input {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.5rem;
-        font-family: sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+
+        @media screen and (min-width: 576px) {
+            font-size: 1.2rem;
+        }
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.5rem;
+        }
     }
 }

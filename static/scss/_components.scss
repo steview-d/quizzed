@@ -3,6 +3,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
     background: url("/static/img/qm-bg.jpg");
+    font-family: "Fira Sans", sans-serif;
 }
 
 hr {
@@ -63,5 +64,9 @@ footer {
 .modal {
     img {
         height: 80px;
+    }
+
+    .btn-secondary {
+        border-color: #dc3545;
     }
 }

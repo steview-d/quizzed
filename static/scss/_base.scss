@@ -2,9 +2,10 @@
 
 $container-border: #aaaaaa;
 
-
 // ---------------------------------------------------------------------- fonts
-
+@import url("https://fonts.googleapis.com/css?family=Acme");
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,600");
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
 
 // --------------------------------------------------------------------- mixins
 
@@ -17,9 +18,26 @@ $container-border: #aaaaaa;
     border: 1px solid black;
 }
 
+// remove space from top of text to make horizontal aligning easier
+// mixin courtesy of https://bit.ly/2wehSgG
+@mixin lhCrop($line-height) {
+    &::before {
+        content: "";
+        display: block;
+        height: 0;
+        width: 0;
+        margin-top: calc((1 - #{$line-height}) * 0.5em);
+    }
+}
 
 // -------------------------------------------------------------------- utility
 
 .hidden {
     display: none;
+}
+
+// --------------------------------------------------------------------- resets
+
+.btn-outline-danger:focus {
+    box-shadow: none;
 }

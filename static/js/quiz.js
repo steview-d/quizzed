@@ -20,9 +20,9 @@ var playerAnswer;
 const url = `https://opentdb.com/api.php?amount=${qLimit}&difficulty=${difficulty}&type=multiple`;
 
 // stat boxes
-const playerNameBox = document.querySelector("#playerNameBox > h3");
-const multiplierBox = document.querySelector("#multiplierBox > h3");
-const scoreBox = document.querySelector("#scoreBox > h3");
+const playerNameBox = document.querySelector("#playerNameBox > h2");
+const multiplierBox = document.querySelector("#multiplierBox > h2");
+const scoreBox = document.querySelector("#scoreBox > h2");
 
 // question & answer box
 const qaBox = document.querySelector("#qa-box");

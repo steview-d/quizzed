@@ -1,5 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Acme");
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,600");
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy");
 .hidden {
   display: none;
+}
+
+.btn-outline-danger:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+h1,
+h2,
+h3,
+h5,
+h6 {
+  font-family: 'Luckiest Guy', cursive;
+}
+
+#q-num {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 5rem;
+}
+
+#q-num::before {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  margin-top: calc((1 - 1.65) * 0.5em);
+}
+
+#q-text {
+  font-size: 1.2rem;
 }
 
 input {
@@ -76,8 +109,20 @@ input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1.5rem;
-  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 576px) {
+  .answer-grid-outer .answer-grid-inner {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .answer-grid-outer .answer-grid-inner {
+    font-size: 1.5rem;
+  }
 }
 
 body {
@@ -90,6 +135,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background: url("/static/img/qm-bg.jpg");
+  font-family: "Fira Sans", sans-serif;
 }
 
 hr {
@@ -150,5 +196,9 @@ footer i:hover {
 
 .modal img {
   height: 80px;
+}
+
+.modal .btn-secondary {
+  border-color: #dc3545;
 }
 /*# sourceMappingURL=main.css.map */
