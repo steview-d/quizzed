@@ -156,7 +156,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: url("/static/img/bg_tile.png");
+  background-image: url("../img/bg_tile.png");
   font-family: "Fira Sans", sans-serif;
 }
 

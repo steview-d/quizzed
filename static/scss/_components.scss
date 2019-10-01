@@ -2,8 +2,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background: url("/static/img/bg_tile.png");
-    // background: url("/static/img/qm-bg.jpg");
+    background-image: url('../img/bg_tile.png');
     font-family: "Fira Sans", sans-serif;
 }
 
