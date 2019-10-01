@@ -134,7 +134,7 @@ function askQuestion(qData) {
 
     // display answers
     allAnswers.forEach((answer, idx) => {
-        answerList[idx].innerText = answer;
+        answerList[idx].innerHTML = answer;
     });
 
     // listen for user input when clicking an answer
@@ -199,5 +199,3 @@ getData(url, function(data) {
     // Call main game loop once data is ready
     askQuestion(qData);
 });
-
-askQuestion(qData);
