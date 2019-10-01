@@ -18,16 +18,16 @@
 
 <body>
     <!-- nav bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light container">
-        <a class="navbar-brand" href="#"><img src="static\img\logo.png"></a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary container">
+        <a class="navbar-brand" href="#"><img src="static\img\logo_w.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto my-2 my-lg-0 qqqq">
-                <a class="nav-item nav-link text-uppercase font-weight-bold p-0 p-lg-2 my-lg-2" href="">Difficulty</a>
+            <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                <a
+                    class="nav-item nav-link text-uppercase text-light font-weight-bold p-0 p-lg-2 mr-1 my-lg-2">Difficulty</a>
                 <div class="form-row align-items-center">
                     <div class="col-auto mr-3 my-2">
                         <select id="difficulty-selector" class="custom-select mr-2" id="inlineFormCustomSelect">
@@ -37,7 +37,7 @@
                         </select>
                     </div>
                 </div>
-                <li><button id="btn-instructions" class="btn btn-outline-danger my-2 mx-0 mx-lg-2" data-toggle="modal"
+                <li><button id="btn-instructions" class="btn btn-outline-light my-2 mx-0 mx-lg-2" data-toggle="modal"
                         data-target="#instructionsModal">Instructions</button>
                 </li>
             </ul>
@@ -45,9 +45,10 @@
     </nav>
 
     <!-- main content -->
-    <div class="content container high-score-bg px-0">
-        <div class="bg-white py-5">
-            <!-- player name -->
+    <div class="content container bg-col-purple px-0">
+        <!-- player name -->
+        <div class="qbg-danger py-5 bg-light">
+
             <div id="player-name-container" class="text-center">
                 <h2 class="py-5">Who Are You?</h2>
                 <div class="input-group input-group-lg mx-auto col-10 col-md-8 col-xl-6">
@@ -59,48 +60,46 @@
                 </div>
             </div>
         </div>
-        <div>
-            <!-- high scores -->
-            <div id="high-scores" class="my-5 text-center">
-                <h2 class="text-center my-5">High Scores</h2>
-                <div id="high-score-table" class="mx-auto col-10 col-md-8 col-xl-6">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Score</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td id="hs-n1"> </td>
-                                <td id="hs-s1"> </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td id="hs-n2"> </td>
-                                <td id="hs-s2"> </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td id="hs-n3"> </td>
-                                <td id="hs-s3"> </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td id="hs-n4"> </td>
-                                <td id="hs-s4"> </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td id="hs-n5"> </td>
-                                <td id="hs-s5"> </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+        <!-- high scores -->
+        <div id="high-scores" class="text-center mx-auto my-5 col-10 col-md-8 col-xl-6">
+            <h2 class="text-center my-5">High Scores</h2>
+            <div id="high-score-table" class="p-0 bg-light">
+                <table class="table table-striped m-0">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td id="hs-n1"> </td>
+                            <td id="hs-s1"> </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td id="hs-n2"> </td>
+                            <td id="hs-s2"> </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td id="hs-n3"> </td>
+                            <td id="hs-s3"> </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td id="hs-n4"> </td>
+                            <td id="hs-s4"> </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td id="hs-n5"> </td>
+                            <td id="hs-s5"> </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -139,7 +138,7 @@
                     <p>If you answer a question incorrectly, your multiplier is reset.</p>
                     <p>The biggest scores go to the players who can answer the most questions in a row without getting
                         any wrong.</p>
-                    <h6 class="font-weight-bold">Good Luck!</h6>
+                    <h5>Good Luck!</h5>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary bg-danger" data-dismiss="modal">Close</button>

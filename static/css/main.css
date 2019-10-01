@@ -47,17 +47,22 @@ input {
   border-color: #c45f5f;
   -webkit-box-shadow: none;
           box-shadow: none;
-  background-color: #fafafa;
 }
 
 #high-score-table {
   border: 1px solid black;
-  background-color: white;
   padding: 2rem;
 }
 
 .stats-display {
   padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.qbox {
+  padding: 1rem;
+  border-radius: 10px;
   border: 1px solid black;
 }
 
@@ -65,7 +70,7 @@ input {
   margin: 20px auto;
   width: 250px;
   height: 500px;
-  background-color: #fff;
+  background-color: #f8f9fa;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100%;
@@ -126,8 +131,20 @@ input {
   }
 }
 
-.high-score-bg {
-  background-color: #ffa0aa;
+.bg-col-blue {
+  background-color: #6b88ff;
+}
+
+.bg-col-orange {
+  background-color: #ffad6b;
+}
+
+.bg-col-green {
+  background-color: #74f1b3;
+}
+
+.bg-col-purple {
+  background-color: #e8a4ee;
 }
 
 body {
@@ -139,7 +156,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: url("/static/img/qm-bg.jpg");
+  background: url("/static/img/bg_tile.png");
   font-family: "Fira Sans", sans-serif;
 }
 
@@ -151,22 +168,24 @@ hr {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  border-left: 1px solid #aaaaaa;
-  border-right: 1px solid #aaaaaa;
 }
 
-nav {
-  border-left: 1px solid #aaaaaa;
-  border-right: 1px solid #aaaaaa;
+@media screen and (min-width: 576px) {
+  .content {
+    border-left: 1px solid #aaaaaa;
+    border-right: 1px solid #aaaaaa;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  nav {
+    border-left: 1px solid #aaaaaa;
+    border-right: 1px solid #aaaaaa;
+  }
 }
 
 .navbar-brand img {
   height: 40px;
-}
-
-footer {
-  border-left: 1px solid #aaaaaa;
-  border-right: 1px solid #aaaaaa;
 }
 
 footer img {
@@ -196,6 +215,13 @@ footer i:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   color: white;
+}
+
+@media screen and (min-width: 576px) {
+  footer {
+    border-left: 1px solid #aaaaaa;
+    border-right: 1px solid #aaaaaa;
+  }
 }
 
 .modal img {

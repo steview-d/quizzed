@@ -2,7 +2,8 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background: url("/static/img/qm-bg.jpg");
+    background: url("/static/img/bg_tile.png");
+    // background: url("/static/img/qm-bg.jpg");
     font-family: "Fira Sans", sans-serif;
 }
 
@@ -13,14 +14,17 @@ hr {
 .content {
     flex: 1;
     // background-color: rgba(255, 255, 255, 0.95);
-    @include container-borders;
+    @media screen and (min-width: 576px) {
+        @include container-borders;
+    }
 }
-
 
 // --------------------------------------------------------------------- navbar
 
 nav {
-    @include container-borders;
+    @media screen and (min-width: 576px) {
+        @include container-borders;
+    }
 }
 
 .navbar-brand {
@@ -29,12 +33,9 @@ nav {
     }
 }
 
-
 // --------------------------------------------------------------------- footer
 
 footer {
-
-    @include container-borders;
     img {
         height: 60px;
         transition: all 0.2s ease-in-out;
@@ -56,8 +57,11 @@ footer {
         transform: scale(1.1);
         color: rgb(255, 255, 255);
     }
-}
 
+    @media screen and (min-width: 576px) {
+        @include container-borders;
+    }
+}
 
 // ---------------------------------------------------------------------- modal
 

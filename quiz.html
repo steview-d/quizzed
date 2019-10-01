@@ -20,16 +20,15 @@
 
 <body>
     <!-- nav bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light container">
-        <a class="navbar-brand" href="index.html"><img src="static\img\logo.png"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary container">
+        <a class="navbar-brand" href="index.html"><img src="static\img\logo_w.png"></a>
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto my-2 my-lg-0 qqqq">
-                <li><button id="btn-instructions" class="btn btn-outline-danger my-2 mx-0 mx-lg-2" data-toggle="modal"
+            <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                <li><button id="btn-instructions" class="btn btn-outline-light my-2 mx-0 mx-lg-2" data-toggle="modal"
                         data-target="#instructionsModal">Instructions</button>
                 </li>
             </ul>
@@ -37,61 +36,54 @@
     </nav>
 
     <!-- main content -->
-    <div class="content container">
-        <div class="mx-2 mx-md-4 mx-xl-5">
-            <br />
-            <!-- info boxes -->
-            <div id="stat-boxes" class="text-center my-3">
-                <div class="row justify-content-between">
-                    <div id="playerNameBox" class="col-lg-4 m-3 stats-display">
-                        <h5>Player</h5>
-                        <h2> </h2>
-                    </div>
-                    <div id="multiplierBox" class="col col-lg-3 m-3 stats-display">
-                        <h5>Multiplier</h5>
-                        <h2>1</h2>
-                    </div>
-                    <div id="scoreBox" class="col col-lg-3 m-3 stats-display">
-                        <h5>Score</h5>
-                        <h2>0</h2>
-                    </div>
+    <div class="content container bg-light px-0">
+        <!-- info boxes -->
+        <div id="stat-boxes" class="mx-2 mx-md-4 mx-xl-5 pt-4 text-center">
+            <div class="row justify-content-between">
+                <div id="playerNameBox" class="col-lg-4 m-3 stats-display bg-col-blue">
+                    <h5>Player</h5>
+                    <h2> </h2>
+                </div>
+                <div id="multiplierBox" class="col col-lg-3 m-3 stats-display bg-col-green">
+                    <h5>Multiplier</h5>
+                    <h2>1</h2>
+                </div>
+                <div id="scoreBox" class="col col-lg-3 m-3 stats-display bg-col-orange">
+                    <h5>Score</h5>
+                    <h2>0</h2>
                 </div>
             </div>
-            <br />
+        </div>
 
-            <!-- end game summary -->
-            <div id="end-game-summary" class="hidden">
-                <div class="text-center">
-                    <h3>All Questions Answered</h3>
-                    <h5>Your score is</h5>
-                    <h3 id="end-game-score"> </h3>
-                    <br>
-                    <h5 id="high-score-message"> </h5>
-                    <br>
-                    <div id="end-game-options">
-                        <a href="quiz.html" id="play-again" class="btn btn-outline-primary">Play Again</a>
-                        <a href="index.html" id="view-high-scores" class="btn btn-outline-primary">View High Scores</a>
-                    </div>
+        <!-- end game summary -->
+        <div id="end-game-summary" class="mx-2 mx-md-4 mx-xl-5 my-5 hidden">
+            <div class="text-center">
+                <h3>All Questions Answered</h3>
+                <h5>Your score is</h5>
+                <h3 id="end-game-score"> </h3>
+                <h5 id="high-score-message"> </h5>
+                <div id="end-game-options" class="my-4">
+                    <a href="quiz.html" id="play-again" class="btn btn-outline-danger mx-2">Play Again</a>
+                    <a href="index.html" id="view-high-scores" class="btn btn-outline-danger mx-2">View High
+                        Scores</a>
                 </div>
             </div>
+        </div>
 
-            <!-- Q & A area -->
-            <div id="qa-box" class="mb-5 p-4">
-                <div class="row">
+        <!-- Q & A area -->
+        <div id="qa-box" class="mx-2 mx-md-4 mx-xl-5 my-4 px-3">
+            <!-- <div id="qa-box" > -->
+                <div class="row qbox bg-col-purple">
                     <div id="q-num" class="col-12 col-md-2"> </div>
-                    <div id="q-text" class="col pb-4"> </div>
+                    <div id="q-text" class="col"> </div>
                 </div>
-                <div class="answer-grid-outer text-center">
+                <div class="answer-grid-outer my-5 text-center">
                     <div id="answer-1" class="answer-grid-inner"> </div>
                     <div id="answer-2" class="answer-grid-inner"> </div>
                     <div id="answer-3" class="answer-grid-inner"> </div>
                     <div id="answer-4" class="answer-grid-inner"> </div>
                 </div>
-                <div id="next-question" class="hidden text-center">
-                    <br />
-                    <a href="" id="next-question-button" class="btn btn-outline-primary">Next Question</a>
-                </div>
-            </div>
+            <!-- </div> -->
         </div>
     </div>
 
@@ -129,7 +121,7 @@
                     <p>If you answer a question incorrectly, your multiplier is reset.</p>
                     <p>The biggest scores go to the players who can answer the most questions in a row without getting
                         any wrong.</p>
-                    <h6 class="font-weight-bold">Good Luck!</h6>
+                    <h5>Good Luck!</h5>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary bg-danger" data-dismiss="modal">Close</button>

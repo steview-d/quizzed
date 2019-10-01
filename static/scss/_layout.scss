@@ -33,19 +33,20 @@ input {
 .form-control:focus {
     border-color: rgb(196, 95, 95);
     box-shadow: none;
-    background-color: #fafafa;
+    // background-color: #fafafa;
 }
 
 // ---------------------------------------------------------------- high scores
 #high-score-table {
     @include black-border;
-    background-color: white;
+    // background-color: white;
     padding: 2rem;
 }
 
 // ---------------------------------------------------------------------- stats
 .stats-display {
     padding: 1rem;
+    border-radius: 10px;
     @include black-border;
 }
 
@@ -55,13 +56,20 @@ input {
 //     }
 // }
 
+.qbox {
+    padding: 1rem;
+    border-radius: 10px;
+    @include black-border;
+}
+
+
 // ---------------------------------------------------------------- answer grid
 
 .answer-grid-outer {
     margin: 20px auto;
     width: 250px;
     height: 500px;
-    background-color: #fff;
+    background-color: #f8f9fa;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 15% 15% 15% 15%;
@@ -103,6 +111,18 @@ input {
     }
 }
 
-.high-score-bg {
-    background-color: #ffa0aa;
+.bg-col-blue {
+    background-color: #6b88ff;
+}
+
+.bg-col-orange {
+    background-color: #ffad6b;
+}
+
+.bg-col-green {
+    background-color: #74f1b3;
+}
+
+.bg-col-purple {
+    background-color: #e8a4ee;
 }
