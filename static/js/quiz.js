@@ -4,7 +4,7 @@
 var highScores = JSON.parse(localStorage.getItem("highScores"));
 var playerName = localStorage.getItem("playerName");
 var difficulty = localStorage.getItem("difficulty");
-var qLimit = 3;
+var qLimit = 10;
 var qNum = 0;
 var qData;
 var score = 0;
@@ -120,7 +120,7 @@ function checkForHighScore() {
 function askQuestion(qData) {
     // ask the question
     qNumBox.innerText = `Q${qNum + 1}`;
-    qTextArea.innerText = qData[qNum].question;
+    qTextArea.innerHTML = qData[qNum].question;
 
     // store the correct answer
     correctAnswer = qData[qNum].correct_answer;
@@ -193,52 +193,11 @@ var checkAnswer = function(e) {
 setMultiplier(difficulty);
 updateStats();
 
-// getData(url, function(data) {
-//     qData = data.results;
+getData(url, function(data) {
+    qData = data.results;
 
-//     // Call main game loop once data is ready
-//     askQuestion(qData);
-// });
-
-// dummy data 6 questions
-// var dummyData = {"response_code":0,"results":[{"category":"Art","type":"multiple","difficulty":"easy","question":"Who painted the Sistine Chapel?","correct_answer":"Michelangelo","incorrect_answers":["Leonardo da Vinci","Pablo Picasso","Raphael"]},{"category":"Geography","type":"multiple","difficulty":"easy","question":"Which of the following European languages is classified as a &quot;language isolate?&quot;","correct_answer":"Basque","incorrect_answers":["Galician","Maltese","Hungarian"]},{"category":"Entertainment: Video Games","type":"multiple","difficulty":"easy","question":"In the fighting game &quot;Skullgirls,&quot; which character utilizes a folding chair called the &quot;Hurting&quot; as a weapon?","correct_answer":"Beowulf","incorrect_answers":["Big Band","Squigly","Cerebella"]},{"category":"History","type":"multiple","difficulty":"easy","question":"The collapse of the Soviet Union took place in which year?","correct_answer":"1991","incorrect_answers":["1992","1891","1990"]},{"category":"Entertainment: Video Games","type":"multiple","difficulty":"easy","question":"In Undertale, what&#039;s the prize for answering correctly?","correct_answer":"More questions","incorrect_answers":["New car","Mercy","Money"]},{"category":"Science: Computers","type":"multiple","difficulty":"easy","question":"In &quot;Hexadecimal&quot;, what color would be displayed from the color code? &quot;#00FF00&quot;?","correct_answer":"Green","incorrect_answers":["Red","Blue","Yellow"]}]};
-// dummy data 3 questions
-var dummyData = {
-    response_code: 0,
-    results: [
-        {
-            category: "History",
-            type: "multiple",
-            difficulty: "easy",
-            question:
-                "Which one of these tanks was designed and operated by the United Kingdom?",
-            correct_answer: "Tog II",
-            incorrect_answers: ["M4 Sherman", "Tiger H1", "T-34"]
-        },
-        {
-            category: "Entertainment: Video Games",
-            type: "multiple",
-            difficulty: "easy",
-            question:
-                "Which eSports team came first place in The International Dota 2 Championship 2016?",
-            correct_answer: "Wings Gaming",
-            incorrect_answers: ["Digital Chaos", "Evil Geniuses", "Fnatic"]
-        },
-        {
-            category: "Entertainment: Television",
-            type: "multiple",
-            difficulty: "easy",
-            question:
-                "In the show, Doctor Who, what does T.A.R.D.I.S stand for?",
-            correct_answer: "Time And Relative Dimensions In Space",
-            incorrect_answers: [
-                "Time And Resting Dimensions In Space",
-                "Time And Relative Dimensions In Style",
-                "Toilet Aid Rope Dog Is Soup"
-            ]
-        }
-    ]
-};
-qData = dummyData.results;
+    // Call main game loop once data is ready
+    askQuestion(qData);
+});
 
 askQuestion(qData);
