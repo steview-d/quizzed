@@ -1,12 +1,52 @@
-// ----------------------------------------------------------------- typography
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url('../img/bg_tile.png');
+    font-family: "Fira Sans", sans-serif;
+}
 
-h1,
+.content {
+    flex: 1;
+    @media screen and (min-width: 576px) {
+        @include container-borders;
+    }
+}
+
 h2,
 h3,
 h5,
 h6 {
-    // font-family: "Acme", sans-serif;
     font-family: 'Luckiest Guy', cursive;
+}
+
+// ------------------------------------------------------- input & form control
+
+input {
+    text-align: center;
+}
+
+.form-control:focus {
+    border-color: $red;
+    box-shadow: none;
+}
+
+// ---------------------------------------------------------------- high scores
+
+#high-score-table {
+    @include black-border;
+}
+
+// ---------------------------------------------------------------------- stats
+
+.stats-display {
+    @include box-style;
+}
+
+// ---------------------------------------------------------- question & answer
+
+.qbox {
+    @include box-style;
 }
 
 #q-num {
@@ -19,110 +59,20 @@ h6 {
     font-size: 1.2rem;
 }
 
-// ------------------------------------------------------- input & form control
-input {
-    text-align: center;
-}
-
-// .input-group-lg>.form-control
-
-.form-control::-webkit-input-placeholder {
-    color: #bbb;
-}
-
-.form-control:focus {
-    border-color: rgb(196, 95, 95);
-    box-shadow: none;
-    // background-color: #fafafa;
-}
-
-// ---------------------------------------------------------------- high scores
-#high-score-table {
-    @include black-border;
-    // background-color: white;
-    padding: 2rem;
-}
-
-// ---------------------------------------------------------------------- stats
-.stats-display {
-    padding: 1rem;
-    border-radius: 10px;
-    @include black-border;
-}
-
-// #stat-boxes {
-//     h3 {
-//         font-size:
-//     }
-// }
-
-.qbox {
-    padding: 1rem;
-    border-radius: 10px;
-    @include black-border;
-}
-
-
-// ---------------------------------------------------------------- answer grid
-
-.answer-grid-outer {
-    margin: 20px auto;
-    width: 250px;
-    height: 500px;
-    background-color: #f8f9fa;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 15% 15% 15% 15%;
-    grid-row: auto / auto;
-    grid-column-gap: 5%;
-    grid-row-gap: 5%;
-
-    @media screen and (min-width: 576px) {
-        width: 400px;
-        height: 300px;
-        grid-template-columns: 47.5% 47.5%;
-        grid-template-rows: 45% 45%;
-        grid-row-gap: 10%;
-    }
-
-    @media screen and (min-width: 768px) {
-        width: 600px;
-        height: 300px;
-    }
-
-    .answer-grid-inner {
-        padding: 0.5rem;
-        background-color: #333;
-        border-radius: 10px;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1rem;
-        font-weight: 600;
-
-        @media screen and (min-width: 576px) {
-            font-size: 1.2rem;
-        }
-
-        @media screen and (min-width: 768px) {
-            font-size: 1.5rem;
-        }
-    }
-}
+// ---------------------------------------------------------- background colors
 
 .bg-col-blue {
-    background-color: #6b88ff;
+    background-color: $blue;
 }
 
 .bg-col-orange {
-    background-color: #ffad6b;
+    background-color: $orange;
 }
 
 .bg-col-green {
-    background-color: #74f1b3;
+    background-color: $green;
 }
 
 .bg-col-purple {
-    background-color: #e8a4ee;
+    background-color: $purple;
 }

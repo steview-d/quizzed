@@ -1,21 +1,37 @@
 // ------------------------------------------------------------------ variables
 
-$container-border: #aaaaaa;
+$white: #fff;
+$blue: #6b88ff;
+$orange: #ffad6b;
+$green: #74f1b3;
+$purple: #e8a4ee;
+$red: #c45f5f;
+$grey: #aaaaaa;
+$light-grey: #e0e0e0;
+$dark-grey: #333;
+$bs-light: #f8f9fa;
+$bs-danger: #dc3545;
 
 // ---------------------------------------------------------------------- fonts
-@import url("https://fonts.googleapis.com/css?family=Acme");
-@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,600");
+
 @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,600");
 
 // --------------------------------------------------------------------- mixins
 
 @mixin container-borders {
-    border-left: 1px solid $container-border;
-    border-right: 1px solid $container-border;
+    border-left: 1px solid $grey;
+    border-right: 1px solid $grey;
 }
 
 @mixin black-border {
     border: 1px solid black;
+}
+
+@mixin box-style {
+    padding: 1rem;
+    border-radius: 10px;
+    @include black-border;
 }
 
 // remove space from top of text to make horizontal aligning easier
@@ -38,6 +54,6 @@ $container-border: #aaaaaa;
 
 // --------------------------------------------------------------------- resets
 
-.btn-outline-danger:focus {
+.btn-outline-light:focus {
     box-shadow: none;
 }

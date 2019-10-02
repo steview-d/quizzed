@@ -1,21 +1,71 @@
-@import url("https://fonts.googleapis.com/css?family=Acme");
-@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,600");
 @import url("https://fonts.googleapis.com/css?family=Luckiest+Guy");
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,600");
 .hidden {
   display: none;
 }
 
-.btn-outline-danger:focus {
+.btn-outline-light:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-h1,
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: url("../img/bg_tile.png");
+  font-family: "Fira Sans", sans-serif;
+}
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media screen and (min-width: 576px) {
+  .content {
+    border-left: 1px solid #aaaaaa;
+    border-right: 1px solid #aaaaaa;
+  }
+}
+
 h2,
 h3,
 h5,
 h6 {
   font-family: 'Luckiest Guy', cursive;
+}
+
+input {
+  text-align: center;
+}
+
+.form-control:focus {
+  border-color: #c45f5f;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#high-score-table {
+  border: 1px solid black;
+}
+
+.stats-display {
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.qbox {
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid black;
 }
 
 #q-num {
@@ -35,35 +85,31 @@ h6 {
   font-size: 1.2rem;
 }
 
-input {
-  text-align: center;
+.bg-col-blue {
+  background-color: #6b88ff;
 }
 
-.form-control::-webkit-input-placeholder {
-  color: #bbb;
+.bg-col-orange {
+  background-color: #ffad6b;
 }
 
-.form-control:focus {
-  border-color: #c45f5f;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+.bg-col-green {
+  background-color: #74f1b3;
 }
 
-#high-score-table {
-  border: 1px solid black;
-  padding: 2rem;
+.bg-col-purple {
+  background-color: #e8a4ee;
 }
 
-.stats-display {
-  padding: 1rem;
-  border-radius: 10px;
-  border: 1px solid black;
+@media screen and (min-width: 576px) {
+  nav {
+    border-left: 1px solid #aaaaaa;
+    border-right: 1px solid #aaaaaa;
+  }
 }
 
-.qbox {
-  padding: 1rem;
-  border-radius: 10px;
-  border: 1px solid black;
+.navbar-brand img {
+  height: 40px;
 }
 
 .answer-grid-outer {
@@ -117,6 +163,7 @@ input {
           justify-content: center;
   font-size: 1rem;
   font-weight: 600;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 576px) {
@@ -129,63 +176,6 @@ input {
   .answer-grid-outer .answer-grid-inner {
     font-size: 1.5rem;
   }
-}
-
-.bg-col-blue {
-  background-color: #6b88ff;
-}
-
-.bg-col-orange {
-  background-color: #ffad6b;
-}
-
-.bg-col-green {
-  background-color: #74f1b3;
-}
-
-.bg-col-purple {
-  background-color: #e8a4ee;
-}
-
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-image: url("../img/bg_tile.png");
-  font-family: "Fira Sans", sans-serif;
-}
-
-hr {
-  width: 80%;
-}
-
-.content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-@media screen and (min-width: 576px) {
-  .content {
-    border-left: 1px solid #aaaaaa;
-    border-right: 1px solid #aaaaaa;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  nav {
-    border-left: 1px solid #aaaaaa;
-    border-right: 1px solid #aaaaaa;
-  }
-}
-
-.navbar-brand img {
-  height: 40px;
 }
 
 footer img {
@@ -214,7 +204,7 @@ footer i {
 footer i:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  color: white;
+  color: #fff;
 }
 
 @media screen and (min-width: 576px) {

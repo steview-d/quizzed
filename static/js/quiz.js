@@ -160,7 +160,7 @@ var checkAnswer = function(e) {
         e.path[0].classList.add("bg-danger");
         // on wrong answer, highlight correct answer
         answerBoxes.forEach(answerBox => {
-            if (answerBox.innerText === correctAnswer) {
+            if (answerBox.innerHTML === decodeHTML(correctAnswer)) {
                 answerBox.classList.add("bg-success");
                 setTimeout(function() {
                     answerBox.classList.remove("bg-success");
@@ -186,6 +186,13 @@ var checkAnswer = function(e) {
         }
     }, pause);
 };
+
+// remove HTML char encoding from passed string
+function decodeHTML(html) {
+    var txt = document.createElement("textarea");
+    txt.innerHTML = html;
+    return txt.value;
+}
 
 
 // --------------------------------------------- Main
